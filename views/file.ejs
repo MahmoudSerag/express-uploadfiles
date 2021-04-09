@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <h1>File uploaded successfully.</h1>
+  </div>
+  <div>
+    <p>File Name</p>
+    <p><%= fileName %></p>
+  </div>
+  <p>File Path</p>
+  <% if (filePath.startsWith('image')) { %>
+    <img src="<%= filePath %>" alt="dasdsadas" height="450" width="500">
+  <% } else { %>
+    <video width="500" height="450" controls>
+      <source src="<%= filePath %> " type="video/mp4">
+    </video>
+  <% } %> 
+
+</body>
+</html>
